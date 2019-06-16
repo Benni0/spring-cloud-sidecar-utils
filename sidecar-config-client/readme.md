@@ -66,11 +66,11 @@ As it is not possible to set system variables from java code, there exists a wor
 **Example:**
 
 ```bash
-java -jar /tmp/configbuilder.jar \
-    -n "oxcontainer" \
-    -c $CONFIGSERVER_URI \
-    -p $PROFILE
-
+java \
+    -Dspring.application.name=oxcontainer \
+    -Dspring.cloud.config.uri=$CONFIGSERVER_URI \
+    -Dspring.profiles.active=$PROFILE \
+    -jar /tmp/configbuilder.jar
 chmod u+x /tmp/environment.sh
 source /tmp/environment.sh
 rm /tmp/environment.sh
