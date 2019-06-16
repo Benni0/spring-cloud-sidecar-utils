@@ -1,11 +1,11 @@
 package at.benji.sc.sidecareurekaregistrar
 
+import at.benji.sc.sidecareurekaregistrar.boot.EnableSidecarEurekaRegistrar
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.cloud.netflix.sidecar.EnableSidecar
 
 @SpringBootApplication
-@EnableSidecar
+@EnableSidecarEurekaRegistrar
 class SidecarEurekaRegistrarApplication
 
 fun main(args: Array<String>) {
