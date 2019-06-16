@@ -122,12 +122,10 @@ tail -f /dev/null
 
 | Parameter                     |                                                              |
 | ----------------------------- | ------------------------------------------------------------ |
-| `-Dspring.application.name`   | Defines the application name, which is required for configuration fetching |
-| `-Dspring.cloud.config.uri`   | Specifies the Uri of the configuration server e.g. http://configserver:8888 |
-| `-Dspring.profiles.active`    | Sets the spring boot application profile which is required for configuration fetching |
-| `-Dspring.cloud.config.label` | Specifies the label or git tag for configs fetched from git  |
-
-Specify Parameters before `-jar`
+| `--spring.application.name `  | Defines the application name, which is required for configuration fetching |
+| `--spring.cloud.config.uri`   | Specifies the Uri of the configuration server e.g. http://configserver:8888 |
+| `--spring.profiles.active`    | Sets the spring boot application profile which is required for configuration fetching |
+| `--spring.cloud.config.label` | Specifies the label or git tag for configs fetched from git  |
 
 ## Additional Information
 

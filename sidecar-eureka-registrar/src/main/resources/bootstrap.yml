@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ${sidecar.appName:Generic Sidecar}
+
+server:
+  port: 8081
+
+sidecar:
+  hostname: localhost
+  port: 80
+  health-uri: http://localhost:${server.port}/delegating-status
+  home-page-uri: http://${sidecar.hostname}:${server.port}/
+  check:
+    command: ${sidecar.checkCommand}
+    result: ${sidecar.checkResult}
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: ${eureka.serverUrl}
+  instance:
+    appname: ${spring.application.name}
+    hostname: ${sidecar.hostname}
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${sidecar.health-uri}
+    preferIpAddress: true
+    metadataMap:
+      instanceId: ${sidecar.appName}:${sidecar.port}
