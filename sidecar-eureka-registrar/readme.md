@@ -1,5 +1,7 @@
 # Eureka Registrar for Sidecar Applications
 
+[![License](https://img.shields.io/github/license/Benni0/spring-cloud-sidecar-utils.svg)](https://github.com/Benni0/spring-cloud-sidecar-utils/blob/master/LICENSE)
+
 The **Eureka Registrar for Sidecar Applications** is a Spring Boot Application, which can do eureka registration for applications which are unable to register itself.
 
 To do so, the Eureka Registrar must run in background.

@@ -1,5 +1,7 @@
 # Spring Cloud Config Builder for Sidecar Applications
 
+[![License](https://img.shields.io/github/license/Benni0/spring-cloud-sidecar-utils.svg)](https://github.com/Benni0/spring-cloud-sidecar-utils/blob/master/LICENSE)
+
 The **Spring Cloud Config Builder for Sidecar Applicartions** is a Spring Boot Application, which fetches the configuration from a spring cloud configuration server and modifies configuration files and system variables accordingly.
 
 ## Configuration Files
